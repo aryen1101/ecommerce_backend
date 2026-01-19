@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: ecommerce_backend
+
+  mongodb:
+    uri: mongodb+srv://aryan24bcs10305_db_user:in34ow6ANrRJaSFj@cluster0.qy09zxv.mongodb.net/ecommerce?appName=Cluster0
+
+server:
+  port: 8090
