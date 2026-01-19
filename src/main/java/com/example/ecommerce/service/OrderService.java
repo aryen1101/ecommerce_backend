@@ -43,4 +43,12 @@ public class OrderService {
     public Order get(String id) {
         return orderRepo.findById(id).orElseThrow();
     }
+
+    public void updateOrderStatus(String orderId, String status) {
+        Order order = orderRepo.findById(orderId)
+                .orElseThrow(() -> new RuntimeException("Order not found"));
+        order.setStatus(status);
+        orderRepo.save(order);
+    }
+
 }
